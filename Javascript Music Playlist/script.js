@@ -3,7 +3,7 @@
 // Sample playlist data
 const playlist = [
   {
-    title: "File Select - Sonic the Hedgehog 3 [OST]",
+    title: "File Select - Sonic the Hedgehog 3 [OST]", 
     artist: "Sonic The Hedgehog Official Channel",
     duration: "2:10",
     link: "https://www.youtube.com/watch?v=EWi6S5S9o60&list=PLvNp0Boas721ZhOX_U084B4Jrxdr8rJOj&index=2",
@@ -24,6 +24,21 @@ const playlist = [
     liked: false, // Initialize liked status
   },
 ];
+
+// Loop through the songs array and create a new <div class="song"> for each song
+playlist.forEach((song, index) => {
+  const songElement = document.createElement("div");
+  songElement.className = "song";
+
+  songElement.innerHTML = `
+    <p><strong>${index + 1}. ${song.title}</strong></p>
+    <p>Artist: ${song.artist}</p>
+    <p>Duration: ${song.duration}</p>
+    <a href="${song.link}" target="_blank">Listen</a>
+  `;
+
+  document.body.appendChild(songElement);
+});
 
 //
 
