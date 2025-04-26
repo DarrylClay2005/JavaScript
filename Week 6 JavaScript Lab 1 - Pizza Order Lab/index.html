@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Order Lab</title>
+  </head>
+  <body>
+    <h1>Welcome to the Pizza Order Lab</h1>
+    <form id="pizzaOrderForm">
+      <label for="customerName">Name:</label>
+      <input
+        type="text"
+        id="customerName"
+        name="customerName"
+        required
+      /><br /><br />
+
+      <label for="pizzaSize">Choose Pizza Size:</label>
+      <select id="pizzaSize" name="pizzaSize" required>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option></select
+      ><br /><br />
+      <table>
+        <tr>
+          <td>
+            <label for="crustType">Choose Crust Type:</label>
+          </td>
+          <td>
+            <select id="crustType" name="crustType" required>
+              <option value="thin">Thin Crust</option>
+              <option value="thick">Thick Crust</option>
+              <option value="stuffed">Stuffed Crust</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <br />
+      <tr>
+        <td>
+          <label for="cheeseType">Choose Cheese Type:</label>
+        </td>
+        <td>
+          <select id="cheeseType" name="cheeseType" required>
+            <option value="mozzarella">Mozzarella</option>
+            <option value="cheddar">Cheddar</option>
+            <option value="parmesan">Parmesan</option>
+          </select>
+        </td>
+      </tr>
+      <fieldset>
+        <legend>Choose Toppings:</legend>
+        <input
+          type="checkbox"
+          id="pepperoni"
+          name="toppings"
+          value="Pepperoni"
+        />
+        <label for="pepperoni">Pepperoni</label><br />
+        <input
+          type="checkbox"
+          id="mushrooms"
+          name="toppings"
+          value="Mushrooms"
+        />
+        <label for="mushrooms">Mushrooms</label><br />
+        <input type="checkbox" id="onions" name="toppings" value="Onions" />
+        <label for="onions">Onions</label><br />
+        <input type="checkbox" id="sausage" name="toppings" value="Sausage" />
+        <label for="sausage">Sausage</label><br />
+        <input type="checkbox" id="bacon" name="toppings" value="Bacon" />
+        <label for="bacon">Bacon</label><br />
+      </fieldset>
+      <br />
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
